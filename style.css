@@ -60,7 +60,7 @@ a:not([class]) {
 :root {
   --background-body: rgb(238, 238, 238, 0.8); 
   --background-card: rgb(245, 245, 245);
-  --text: rgba(68, 68, 68, 0.9);
+  --text: rgba(60, 60, 60);
   --text-secondary: rgba(140, 140, 140);
 }
 
@@ -112,6 +112,7 @@ main {
 h1 {
   font-size: 5rem;
   line-height: 1;
+  color: var(--text);
 }
 
 h1 > span {
@@ -119,6 +120,7 @@ h1 > span {
 }
 
 h2 {
+  color: var(--text);
   font-size: 5rem;
   text-transform: lowercase;
   line-height: 0.8;
@@ -184,22 +186,19 @@ h3 {
   background-image: url('assets/so_social.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
-  transform-origin: top left;
 }
 
 .project_card.two {
   background-image: url('assets/plttr.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
-  transform-origin: top right;
 }
 
 .project_card.three {
   background-image: url('assets/members_only.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-  transform-origin: bottom left;
+  background-position: top center;
 }
 
 .project_card.four {
@@ -207,7 +206,6 @@ h3 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  transform-origin: bottom right;
 }
 
 .links {
@@ -285,6 +283,7 @@ input[type="submit"] {
   border-radius: 5px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  transition: all 500ms ease;
 }
 
 input[type="submit"]:hover, 
