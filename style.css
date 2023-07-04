@@ -59,9 +59,9 @@ a:not([class]) {
 
 :root {
   --background-body: rgb(238, 238, 238, 0.8); 
-  --background-card: rgb(245, 245, 245);
-  --text: rgba(60, 60, 60);
-  --text-secondary: rgba(140, 140, 140);
+  --background-input: rgb(245, 245, 245);
+  --background-card: rgba(214, 214, 214, 0.8);
+  --text: gba(42, 42, 42);
 }
 
 body {
@@ -74,17 +74,8 @@ body {
   font-family: "Poppins";
   padding: 1vw 5vw;
   background-color: var(--background-body);
-  color: rgba(42, 42, 42);
+  color: var(--text);
 }
-
-/*
-header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-*/
 
 main, header {
   width: 100%;
@@ -168,6 +159,8 @@ section {
   position: relative;
   border-radius: 5px;
   overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .project_info {
@@ -190,32 +183,24 @@ section {
 
 h3 {
   width: max-content;
-  border-bottom: 2px solid rgba(42, 42, 42);
+  border-bottom: 2px solid var(--text);
 }
 
 .project_card.one {
   background-image: url('assets/so_social.jpeg');
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .project_card.two {
   background-image: url('assets/plttr.jpeg');
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .project_card.three {
   background-image: url('assets/members_only.jpeg');
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: top center;
 }
 
 .project_card.four {
   background-image: url('assets/signup_form.jpeg');
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
 }
 
@@ -256,7 +241,7 @@ small > span {
   align-items: center;
   justify-content: center;
   padding: 1rem 1.5rem;
-  background-color: rgba(42, 42, 42);
+  background-color: var(--text);
   border-radius: 5px;
   color: var(--background-body);
 }
@@ -275,14 +260,14 @@ form {
   gap: 1rem;
   padding: 1rem;
   border-radius: 5px;
-  background-color: rgba(214, 214, 214, 0.8);
+  background-color: var(--background-card);
 }
 
 input[type="text"], 
 input[type="email"],
 textarea {
   width: 100%;
-  background-color: var(--background-card);
+  background-color: var(--background-input);
   border-radius: 5px;
   border: none;
   outline: none;
@@ -295,7 +280,7 @@ input[type="submit"] {
   border: 2px solid transparent;
   outline: none;
   padding: 0.5rem;
-  background-color: var(--background-card);
+  background-color: var(--background-input);
   border-radius: 5px;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -304,8 +289,8 @@ input[type="submit"] {
 
 input[type="submit"]:hover, 
 input[type="submit"]:focus {
-  background-color: rgba(42, 42, 42);
-  color: var(--background-card);
+  background-color: var(--text);
+  color: var(--background-input);
 }
 
 .contact svg {
@@ -342,7 +327,7 @@ a:hover {
 
 button svg {
   height: 2rem;
-  /* add fill */
+  fill: var(--text);
 }
 
 @media only screen and (max-width: 750px) {
@@ -365,7 +350,7 @@ button svg {
   }
 
   .wrapper.about {
-    background-color: rgba(214, 214, 214, 0.8);
+    background-color: var(--background-card);
   }
 
   .nav_links {
