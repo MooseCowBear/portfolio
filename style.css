@@ -61,7 +61,7 @@ a:not([class]) {
   --background-body: rgb(238, 238, 238, 0.8); 
   --background-input: rgb(245, 245, 245);
   --background-card: rgba(214, 214, 214, 0.8);
-  --text: gba(42, 42, 42);
+  --text: rgba(42, 42, 42);
 }
 
 body {
