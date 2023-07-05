@@ -363,7 +363,6 @@ button svg {
 
   .nav_links {
     position: absolute;
-    display: none; /* change to flex */
     flex-direction: column;
     align-items: center;
     padding: 3rem 0;
@@ -382,6 +381,10 @@ button svg {
     border: none;
     outline: none;
     background-color: transparent;
+  }
+
+  .hidden {
+    display: none;
   }
 }
 
