@@ -110,7 +110,6 @@ button {
 
 .theme {
   border: none;
-  outline: none;
   background-color: transparent;
 }
 
@@ -393,7 +392,6 @@ button svg {
   .menu_button {
     display: block;
     border: none;
-    outline: none;
     background-color: transparent;
   }
 
