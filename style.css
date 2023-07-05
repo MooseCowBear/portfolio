@@ -58,15 +58,17 @@ a:not([class]) {
 /* end reset */
 
 :root {
+  color-scheme: light dark;
+}
+
+body {
   --background-body: rgb(238, 238, 238, 0.8); 
   --background-input: rgb(245, 245, 245);
   --background-card: rgba(214, 214, 214, 0.8);
   --background-card-s: rgb(245, 245, 245);
   --background-body-t: rgb(238, 238, 238, 0.7);
   --text: rgba(42, 42, 42);
-}
 
-body {
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
@@ -78,6 +80,19 @@ body {
   background-color: var(--background-body);
   color: var(--text);
 }
+
+body.dark-mode {
+  --background-body: rgb(42, 42, 42);
+  --background-input: rgb(42, 42, 42);
+  --background-card: rgba(68, 68, 68, 0.8);
+  --background-card-s: rgb(68, 68, 68);
+  --background-body-t: rgb(42, 42, 42, 0.7);
+  --text: rgb(238, 238, 238, 0.8);
+}
+
+body.dark-mode .project_card {
+  filter: brightness(0.8);
+}  
 
 main, header {
   width: 100%;
@@ -157,7 +172,6 @@ section {
 
 .project_card {
   height: 400px;
-  transition: all 0.5s linear;
   position: relative;
   border-radius: 5px;
   overflow: hidden;
@@ -403,7 +417,7 @@ button svg {
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  body {
     --background-body: rgb(42, 42, 42);
     --background-input: rgb(42, 42, 42);
     --background-card: rgba(68, 68, 68, 0.8);
@@ -415,4 +429,17 @@ button svg {
   .project_card {
     filter: brightness(0.8);
   }  
+
+  body.light-mode {
+    --background-body: rgb(238, 238, 238, 0.8); 
+    --background-input: rgb(245, 245, 245);
+    --background-card: rgba(214, 214, 214, 0.8);
+    --background-card-s: rgb(245, 245, 245);
+    --background-body-t: rgb(238, 238, 238, 0.7);
+    --text: rgba(42, 42, 42);
+  }
+
+  body.light-mode .project_card {
+    filter: brightness(1);
+  }
 }
