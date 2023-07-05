@@ -76,7 +76,7 @@ body {
   align-items: center;
   justify-content: center;
   font-family: "Poppins", sans-serif;
-  padding: 1vw 5vw;
+  padding: clamp(1rem, 1vw, 2rem) clamp(1rem, 5vw, 3rem);
   background-color: var(--background-body);
   color: var(--text);
 }
